@@ -1,46 +1,128 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="絶対に負けられない戦い。"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
 
-「走るか寝るかするメロス」[l][r]
+「絶対に負けられない戦い。」[l][r]
 
-メロスは激怒した。[l][r]
+じゃんけんで買ったほうが負けたほうにジュースをおごることになった。[l][r]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
+今月はお金が無いので絶対に負けられない[l][r]
 
-(中略)[l][r]
+「準備はいい？」[l][r]
 
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
+もちろんと答える。[l][r]
 
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+「じゃんけん...」[l][r]
+
+*janken
+
+[link target=*tag_tyoki] → チョキを出す。[endlink][r]
+[link target=*tag_paa] → パーを出す。[endlink][r]
+[link target=*tag_guu] → グーを出す。[endlink][r]
 [s]
 
-*tag_sleep
+*tag_tyoki
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
+[getrand var="f.a" min="0" max="2"]
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
+[elsif exp="f.a == 0"]
+
+相手は「グー」を出した。[l][r]
+
+[jump target=*lose]
+
+[elsif exp="f.a == 1"]
+
+相手は「チョキ」を出した。[l][r]
+
+[jump target=*tie]
+
+[elsif exp="f.a == 2"]
+
+相手は「パー」を出した。[l][r]
+
+[jump target=*win]
+
+*tag_paa
+
+[cm]
+
+[getrand var="f.a" min="0" max="2"]
+
+[elsif exp="f.a == 0"]
+
+相手は「グー」を出した。[l][r]
+
+[jump target=*win]
+
+[elsif exp="f.a == 1"]
+
+相手は「チョキ」を出した。[l][r]
+
+[jump target=*lose]
+
+[elsif exp="f.a == 2"]
+
+相手は「パー」を出した。[l][r]
+
+[jump target=*tie]
+
+*tag_guu
+
+[cm]
+
+[getrand var="f.a" min="0" max="2"]
+
+[elsif exp="f.a == 0"]
+
+相手は「グー」を出した。[l][r]
+
+[jump target=*tie]
+
+[elsif exp="f.a == 1"]
+
+相手は「チョキ」を出した。[l][r]
+
+[jump target=*win]
+
+[elsif exp="f.a == 2"]
+
+相手は「パー」を出した。[l][r]
+
+[jump target=*lose]
+
+*tag_win
+
+[cm]
+じゃんけんに勝った。[l][r]
+おごってもらったコーラはとてもおいしかった。[l][r]
+
+【 GOOD END 】[l][cm]
+
+[jump target=*start]
+
+*tag_lose
+
+[cm]
+じゃんけんに負けた。[l][r]
+ただのコーラではなく高い、健康どうのこうのなコーラをおごらされた。[l][r]
+しばらくじゃんけんはしないと心に誓った。[l][cm]
 
 【 BAD END 】[l][cm]
 
 [jump target=*start]
 
-*tag_run
-
-[bg storage=run.jpg time=500]
+*tag_tie
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+あいこだ。[l][r]
+あいこで…[l][cm]
 
-【 GOOD END 】[l][cm]
+[jump target=*janken]
 
-[jump target=*start]
+
