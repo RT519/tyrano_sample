@@ -26,25 +26,25 @@
 
 *tag_tyoki
 
-[cm][l]
+[cm]
 
 [iscript]
 tf.random = Math.floor(Math.random()*3);
 [endscript]
 
-[if exp="tf.random=0"]
+[if exp="tf.random==0"]
 
 相手は「グー」を出した。[l][r]
 
 [jump target=*lose]
 
-[if exp="tf.random=1"]
+[if exp="tf.random==1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*tie]
 
-[if exp="tf.random=2"]
+[if exp="tf.random==2"]
 
 相手は「パー」を出した。[l][r]
 
@@ -52,25 +52,25 @@ tf.random = Math.floor(Math.random()*3);
 
 *tag_paa
 
-[cm][l]
+[cm]
 
 [iscript]
 tf.random = Math.floor(Math.random()*3);
 [endscript]
 
-[if exp="tf.random=0"]
+[if exp="tf.random==0"]
 
 相手は「グー」を出した。[l][r]
 
 [jump target=*win]
 
-[if exp="tf.random=1"]
+[if exp="tf.random==1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*lose]
 
-[if exp="tf.random=2"]
+[if exp="tf.random==2"]
 
 相手は「パー」を出した。[l][r]
 
@@ -78,26 +78,26 @@ tf.random = Math.floor(Math.random()*3);
 
 *tag_guu
 
-[cm][l]
+[cm]
 
 [iscript]
 tf.random = Math.floor(Math.random()*3);
 [endscript]
 
 
-[if exp="tf.random=0"]
+[if exp="tf.random==0"]
 
 相手は「グー」を出した。[l][r]
 
 [jump target=*tie]
 
-[if exp="tf.random=1"]
+[if exp="tf.random==1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*win]
 
-[if exp="tf.random=2"]
+[if exp="tf.random==2"]
 
 相手は「パー」を出した。[l][r]
 
