@@ -38,13 +38,13 @@ tf.random = Math.floor(Math.random()*3);
 
 [jump target=*lose]
 
-[elsif exp="tf.random=1"]
+[if exp="tf.random=1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*tie]
 
-[elsif exp="tf.random=2"]
+[if exp="tf.random=2"]
 
 相手は「パー」を出した。[l][r]
 
@@ -64,13 +64,13 @@ tf.random = Math.floor(Math.random()*3);
 
 [jump target=*win]
 
-[elsif exp="tf.random=1"]
+[if exp="tf.random=1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*lose]
 
-[elsif exp="tf.random=2"]
+[if exp="tf.random=2"]
 
 相手は「パー」を出した。[l][r]
 
@@ -91,13 +91,13 @@ tf.random = Math.floor(Math.random()*3);
 
 [jump target=*tie]
 
-[elsif exp="tf.random=1"]
+[if exp="tf.random=1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*win]
 
-[elsif exp="tf.random=2"]
+[if exp="tf.random=2"]
 
 相手は「パー」を出した。[l][r]
 
