@@ -4,7 +4,7 @@
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
-[inscript]
+[iscript]
 tf.random = Math.floor(Math.random()*3)
 [endscript]
 
