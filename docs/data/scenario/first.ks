@@ -11,6 +11,8 @@
 
 今月はお金が無いので絶対に負けられない[l][r]
 
+[cm]
+
 「準備はいい？」[l][r]
 
 もちろんと答える。[l][r]
@@ -29,26 +31,28 @@
 [cm]
 
 [iscript]
-tf.random = Math.floor(Math.random()*3);
+tf.random = Math.floor(Math.random()*4);
 [endscript]
 
 [if exp="tf.random==0"]
 
-相手は「グー」を出した。[l][r]
+相手は「パー」を出した。[l][r]
 
-[jump target=*lose]
+[jump target=*tag_win]
 
-[if exp="tf.random==1"]
+[elsif exp="tf.random==1"]
 
 相手は「チョキ」を出した。[l][r]
 
-[jump target=*tie]
+[jump target=*tag_tie]
 
-[if exp="tf.random==2"]
+[else]
 
-相手は「パー」を出した。[l][r]
+相手は「グー」を出した。[l][r]
 
-[jump target=*win]
+[jump target=*tag_lose]
+
+[endif]
 
 *tag_paa
 
@@ -62,19 +66,21 @@ tf.random = Math.floor(Math.random()*3);
 
 相手は「グー」を出した。[l][r]
 
-[jump target=*win]
+[jump target=*tag_win]
 
-[if exp="tf.random==1"]
-
-相手は「チョキ」を出した。[l][r]
-
-[jump target=*lose]
-
-[if exp="tf.random==2"]
+[elsif exp="tf.random==1"]
 
 相手は「パー」を出した。[l][r]
 
-[jump target=*tie]
+[jump target=*tag_tie]
+
+[else]
+
+相手は「チョキ」を出した。[l][r]
+
+[jump target=*tag_lose]
+
+[endif]
 
 *tag_guu
 
@@ -84,30 +90,31 @@ tf.random = Math.floor(Math.random()*3);
 tf.random = Math.floor(Math.random()*3);
 [endscript]
 
-
 [if exp="tf.random==0"]
 
 相手は「グー」を出した。[l][r]
 
-[jump target=*tie]
+[jump target=*tag_tie]
 
-[if exp="tf.random==1"]
+[elsif exp="tf.random==1"]
 
 相手は「チョキ」を出した。[l][r]
 
-[jump target=*win]
+[jump target=*tag_win]
 
-[if exp="tf.random==2"]
+[else]
 
 相手は「パー」を出した。[l][r]
 
-[jump target=*lose]
+[jump target=*tag_lose]
+
+[endif]
 
 *tag_win
 
 [cm]
 じゃんけんに勝った。[l][r]
-おごってもらったコーラはとてもおいしかった。[l][r]
+おごってもらったコーラはとてもおいしかった。[l][r][cm]
 
 【 GOOD END 】[l][cm]
 
