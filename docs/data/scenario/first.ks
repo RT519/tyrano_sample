@@ -5,10 +5,6 @@
 [wait time=200]
 [freeimage layer="base"]
 
-[iscript]
-tf.random = Math.floor(Math.random()*3)
-[endscript]
-
 「絶対に負けられない戦い。」[l][r]
 
 じゃんけんで買ったほうが負けたほうにジュースをおごることになった。[l][r]
@@ -30,7 +26,11 @@ tf.random = Math.floor(Math.random()*3)
 
 *tag_tyoki
 
-[cm]
+[cm][l]
+
+[iscript]
+tf.random = Math.floor(Math.random()*3)
+[endscript]
 
 [elsif exp="tf.random=0"]
 
@@ -52,7 +52,11 @@ tf.random = Math.floor(Math.random()*3)
 
 *tag_paa
 
-[cm]
+[cm][l]
+
+[iscript]
+tf.random = Math.floor(Math.random()*3)
+[endscript]
 
 [elsif exp="tf.random=0"]
 
@@ -74,7 +78,12 @@ tf.random = Math.floor(Math.random()*3)
 
 *tag_guu
 
-[cm]
+[cm][l]
+
+[iscript]
+tf.random = Math.floor(Math.random()*3)
+[endscript]
+
 
 [elsif exp="tf.random=0"]
 
