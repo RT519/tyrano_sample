@@ -29,10 +29,10 @@
 [cm][l]
 
 [iscript]
-tf.random = Math.floor(Math.random()*3)
+tf.random = Math.floor(Math.random()*3);
 [endscript]
 
-[elsif exp="tf.random=0"]
+[if exp="tf.random=0"]
 
 相手は「グー」を出した。[l][r]
 
@@ -55,10 +55,10 @@ tf.random = Math.floor(Math.random()*3)
 [cm][l]
 
 [iscript]
-tf.random = Math.floor(Math.random()*3)
+tf.random = Math.floor(Math.random()*3);
 [endscript]
 
-[elsif exp="tf.random=0"]
+[if exp="tf.random=0"]
 
 相手は「グー」を出した。[l][r]
 
@@ -81,11 +81,11 @@ tf.random = Math.floor(Math.random()*3)
 [cm][l]
 
 [iscript]
-tf.random = Math.floor(Math.random()*3)
+tf.random = Math.floor(Math.random()*3);
 [endscript]
 
 
-[elsif exp="tf.random=0"]
+[if exp="tf.random=0"]
 
 相手は「グー」を出した。[l][r]
 
