@@ -4,6 +4,9 @@
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
+[inscript]
+tf.random = Math.floor(Math.random()*3)
+[endscript]
 
 「絶対に負けられない戦い。」[l][r]
 
@@ -28,21 +31,21 @@
 
 [cm]
 
-[getrand var="f.a" min="0" max="2"]
+[emb exp=tf.random ]
 
-[elsif exp="f.a == 0"]
+[elsif exp="tf.random=0"]
 
 相手は「グー」を出した。[l][r]
 
 [jump target=*lose]
 
-[elsif exp="f.a == 1"]
+[elsif exp="tf.random=1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*tie]
 
-[elsif exp="f.a == 2"]
+[elsif exp="tf.random=2"]
 
 相手は「パー」を出した。[l][r]
 
@@ -52,21 +55,21 @@
 
 [cm]
 
-[getrand var="f.a" min="0" max="2"]
+[emb exp=tf.random ]
 
-[elsif exp="f.a == 0"]
+[elsif exp="tf.random=0"]
 
 相手は「グー」を出した。[l][r]
 
 [jump target=*win]
 
-[elsif exp="f.a == 1"]
+[elsif exp="tf.random=1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*lose]
 
-[elsif exp="f.a == 2"]
+[elsif exp="tf.random=2"]
 
 相手は「パー」を出した。[l][r]
 
@@ -76,21 +79,21 @@
 
 [cm]
 
-[getrand var="f.a" min="0" max="2"]
+[emb exp=tf.random ]
 
-[elsif exp="f.a == 0"]
+[elsif exp="tf.random=0"]
 
 相手は「グー」を出した。[l][r]
 
 [jump target=*tie]
 
-[elsif exp="f.a == 1"]
+[elsif exp="tf.random=1"]
 
 相手は「チョキ」を出した。[l][r]
 
 [jump target=*win]
 
-[elsif exp="f.a == 2"]
+[elsif exp="tf.random=2"]
 
 相手は「パー」を出した。[l][r]
 
